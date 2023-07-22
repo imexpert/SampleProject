@@ -1,9 +1,37 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<NeutralLanguage>tr-TR</NeutralLanguage>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Entities\**" />
+	  <EmbeddedResource Remove="Entities\**" />
+	  <None Remove="Entities\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+		<PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Castle.Core" Version="4.4.1" />
+		<PackageReference Include="FluentValidation" Version="10.4.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.7.0" />
+		<PackageReference Include="ServiceStack.Redis" Version="6.0.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
+	</ItemGroup>
 
 </Project>
